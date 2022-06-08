@@ -10,7 +10,7 @@ const routes=Router();
  const userRouter = (app: Application): void => {
   app.get('/users', verifyAuthToken, index);
   app.get('/users/:id', verifyAuthToken, show);
-  app.post('/users', verifyAuthToken, create);
+  app.post('/users', create);
   app.get('/auth', verifyAuthToken, authenticate);
   app.post('/users/:id/add-product-to-order', verifyAuthToken, addProduct);
   app.delete(
